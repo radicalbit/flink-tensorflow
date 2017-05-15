@@ -47,6 +47,16 @@ under the License.
 			<name>Maven Repository Switchboard</name>
 			<url>http://repo1.maven.org/maven2</url>
 		</repository>
+		<repository>
+			<id>cloudera-releases</id>
+			<url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
     
     <properties>
@@ -81,5 +91,18 @@ under the License.
 		<dependencies>
 		</dependencies>
 	</dependencyManagement>
+
+	<distributionManagement>
+		<repository>
+			<id>io.radicalbit.public-repo-releases</id>
+			<name>Radicalbit Releases Repository</name>
+			<url>https://tools.radicalbit.io/maven/repository/internal/</url>
+		</repository>
+		<snapshotRepository>
+			<id>io.radicalbit.public-repo-snapshots</id>
+			<name>Radicalbit Snapshots Repository</name>
+			<url>https://tools.radicalbit.io/maven/repository/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
